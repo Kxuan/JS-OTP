@@ -28,7 +28,7 @@ $ = function(sel) {
   return document.querySelector(sel);
 };
 
-var secret = "23TplPdS46Juzcyx"
+var secret = location.search.slice(1) ? location.search.slice(1) : "23TplPdS46Juzcyx"
 $('#secret').innerText = "Secret: " + secret;
 
 var totp = new jsOTP.totp();
